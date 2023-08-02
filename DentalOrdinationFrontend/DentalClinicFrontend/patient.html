@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zakazivanje termina - Pacijent</title>
+    <link rel="stylesheet" href="patientStyle.css">
+</head>
+<body>
+    <h1>Zakažite vaš termin</h1>
+    <form id="createForm">
+        <label for="patientName">Ime pacijenta:</label>
+        <input type="text" id="patientName" required>
+
+        <label for="durationInMinutes">Trajanje:</label>
+        <select id="durationInMinutes">
+            <option value="30">30min</option>
+            <option value="60">60min</option>
+        </select>
+
+        <label for="appointmentDate">Datum:</label>
+        <input type="date" id="appointmentDate" required>
+
+        <label for="appointmentTime">Vreme:</label>
+        <select id="appointmentTime" required>
+        <option value="" disabled selected>Izaberite vreme</option>
+        </select>
+
+
+        <label for="phoneNumberInput">Broj telefona:</label>
+        <input type="text" id="phoneNumberInput" required>
+
+
+        <button type="submit">Zakaži</button>
+    </form>
+
+    <h2>Vaši termini:</h2>
+
+    <div class="search">
+        <input class="unesiBrTel" type="text" id="phoneNumber" placeholder="Unesite broj telefona" required>
+        <button id="showReservationsButton">Prikaži moje termine</button>
+    </div>
+
+    <table id="reservationTable">
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Vreme</th>
+                <th>Trajanje</th>
+                <th>Broj telefona</th>
+                <th>Otkazivanje</th>
+            </tr>
+        </thead>
+        <tbody id="reservationBody"></tbody>
+    </table>
+
+    <script src="patientScript.js"></script>
+</body>
+</html>

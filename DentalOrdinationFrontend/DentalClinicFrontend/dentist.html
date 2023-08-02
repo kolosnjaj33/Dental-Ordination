@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="dentistStyle.css" />
+    <title>Stomatološka ordinacija</title>
+</head>
+
+<body>
+    <h1>Stomatološka ordinacija</h1>
+
+    <div class="accessClass">
+        <label for="accessCode"></label>
+        <input type="password" placeholder="Unesi sifru" id="accessCode" required>
+        <button id="accessButton">Pristupi kao zubar</button>
+    </div>
+
+    <!-- Forma za kreiranje rezervacije -->
+    <h2 id="h2first">Kreiraj rezervaciju</h2>
+    <form id="createForm">
+        <label for="patientName">Ime pacijenta:</label>
+        <input type="text" id="patientName" required>
+        Trajanje:
+        <select id="durationInMinutes">
+            <option value="30">30min</option>
+            <option value="60">60min</option>
+        </select>
+        <label for="appointmentDate">Datum:</label>
+        <input type="date" id="appointmentDate" required>
+        <label for="appointmentTime">Vreme:</label>
+        <select id="appointmentTime" required>
+            <option value="" disabled selected>Izaberite vreme</option>
+        </select>
+        <label for="phoneNumber">Broj telefona:</label>
+        <input type="text" id="phoneNumber" required>
+
+        <button type="submit">Zakaži</button>
+    </form>
+
+    <!-- Tabela za prikaz rezervacija -->
+    <h2 id="h2second">Rezervacije</h2>
+    <table id="reservationTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ime pacijenta</th>
+                <th>Trajanje</th>
+                <th>Datum</th>
+                <th>Vreme</th>
+                <th>Broj Telefona</th>
+                <th></th> <!-- Prazna kolona za dugme za otkazivanje rezervacije -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Redovi sa podacima o rezervacijama će biti dinamički dodati ovde -->
+        </tbody>
+    </table>
+
+    <script src="dentistScript.js"></script>
+</body>
+
+</html>

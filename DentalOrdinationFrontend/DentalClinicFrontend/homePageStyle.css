@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+h1 {
+    font-size: 70px;
+    color: #0066cc;
+}
+
+h2 {
+    font-size: 50px;
+    color: #0066cc;
+}
+
+.container {
+    display: flex;
+    margin-left: 150px;
+}
+
+.card {
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 102, 204, 0.7); /* Providna plava boja za prekrivanje slike */
+    opacity: 0;
+    transition: opacity 0.3s;
+
+}
+
+.text {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Stilizujemo overlay (opis koji se prikazuje pri prelasku mišem) */
+.card:hover .overlay {
+    opacity: 1;
+}
